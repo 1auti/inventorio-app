@@ -6,10 +6,10 @@ import (
 
 // Si el nombre de la estructura esta en MAYUS -> PUBLICO  | MINUSCULA --> PRIVADO ( Solo visible adentro del paquete)
 type Producto struct {
-	ID       int
-	Name     string
-	Quantity int
-	Price    float64
+	ID       int     `db:"id" json:"id"`
+	Name     string  `db:"name" json:"name"`
+	Quantity int     `db:quantity json:"quantity"`
+	Price    float64 `db:"price" json:"price"`
 }
 
 // El New Producto cumple la funcion del constructor, GO no tiene constructores reales pero por convencion se usa de esta manera
